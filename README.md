@@ -116,6 +116,34 @@ Windowsの場合は[こちら](https://qiita.com/fuku_uma/items/e5ad46125a961232
 
 本レポジトリ「latex-template」をダウンロードする方法は大きく2つ。
 
+1. zipファイルを直接ダウンロードする
+   1. [latex-template](https://github.com/nagampere/latex-template)にアクセスする
+   2. 緑色の「< > Code▽」をクリックし、「Download ZIP」を実行
+2. 【おすすめ】Githubからフォーク(forkする)
+   1. [latex-template](https://github.com/nagampere/latex-template)にアクセスする
+   2. 「< > Code▽」の右上にある「Fork」をクリックし、latex-templateをコピーした新たなレポジトリ(ホストは自身)を作成する
+   3. 新たなレポジトリをgit cloneでローカルに読み込む
+
+**何故Githubを使った方が良いのか？**
+
+1. **バージョン管理が容易**
+   - 過去の変更履歴を保存し、特定のバージョンに戻すことが可能。
+   - 変更点が明確になり、誰が何を修正したかを把握できる。
+2. **バックアップとしての活用**
+   - GitHubにリポジトリを保存することで、データが安全に保管される。
+   - ローカルPCのトラブルやデータ消失のリスクを軽減。
+3. **複数デバイスでの作業が可能**
+   - クラウド上のリポジトリを利用することで、どのデバイスからでも最新状態にアクセスできる。
+   - 自宅や研究室など、環境を問わず作業を続行可能。
+
+Gitの使い方については以下を参照
+- [Githubリポジトリのfork（フォーク/派生）の使い方・clone（クローン）との使い分け](https://www.kagoya.jp/howto/rentalserver/webtrend/githubfork/)
+- [【Git】Git初期設定 for Mac OS
+](https://qiita.com/mmikri/items/89508e9435339fcb97e1)
+- [【入門】VSCodeとGitHubの連携手順・使い方をわかりやすく解説](https://www.kagoya.jp/howto/rentalserver/webtrend/vscode/)
+- [サル先生のGit入門](https://backlog.com/ja/git-tutorial/)
+
+
 ### 2.2 latexのコンパイル
 
 main.texをコンパイルしてPDFファイルを作成する方法は大きく2つ。
