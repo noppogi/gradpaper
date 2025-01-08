@@ -215,5 +215,17 @@
         "．": true
     },
     // レシピの設定、デフォルトで"platex"レシピを実行する
-    "latex-workshop.latex.recipe.default": "first"
+    "latex-workshop.latex.recipe.default": "first",
+    // latexindentを使ってformattingする
+    // formattingのショートカットは「Shift + option + F」
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "/usr/local/bin/latexindent",
+    "latex-workshop.formatting.latexindent.args": [
+        "-c",
+        "%DIR%/log",
+        "%TMPFILE%",
+        "-l",
+        "%DIR%/latexindent",
+        "-r"
+    ]
 }

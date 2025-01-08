@@ -25,8 +25,6 @@ _minted*
 *.snm
 *.vrb
 
-latexindent.yaml
-
 !/figure/figure_sample.png
 !/logs/.gitkeep
 
