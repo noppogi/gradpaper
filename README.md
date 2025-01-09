@@ -252,7 +252,7 @@ natbibとは、文献管理を目的としたlatexライブラリの一つで、
 
 ## 5. 各ディレクトリの説明
 
-```markdown
+```{}
 latex-template
 ├── main.tex                   # メインファイル（全体をまとめる）
 ├── preamble
