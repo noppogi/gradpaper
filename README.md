@@ -7,10 +7,11 @@ LaTeX（ラテフ）は、レポートや学術論文などの文書作成に適
 
 ## 1. 環境設定
 
-VS CodeはLaTeX環境としておすすめです。「LaTeX Workshop」によりリアルタイムPDFプレビュー、自動補完、エラー表示が可能で、効率的に作業が進むからです。
-さらに、軽量で動作が速く、Gitや他ツールとの統合も優れています。カスタマイズ性が高く、初心者から上級者まで幅広く対応可能。クロスプラットフォーム対応でどのOSでも一貫した環境が構築できます。
+VS CodeはLaTeX環境としておすすめ。「LaTeX Workshop」によるリアルタイムPDFプレビュー、自動補完、エラー表示が可能で、効率的に作業が進められる。
+さらに、軽量で動作が速く、Gitなどの他ツールとの統合も可能。
 
 参考
+
 - [【自研究室向け】LaTeX+VSCode環境構築 2023年版](https://qiita.com/fuku_uma/items/e5ad46125a9612320273)
 - [LaTeX Workshop を使いこなす](https://qiita.com/Yarakashi_Kikohshi/items/a9357dd469320ffb65a0)
 
@@ -32,6 +33,7 @@ sudo tlmgr paper a4
 
 MacOSでhomebrewを使っていない人はいますぐ使えるようになってください。  
 これが使えるようになると、今後の全ての環境構築が圧倒的に楽になります。  
+
 - [【macOS版】初心者でもわかる！Homebrewのインストール手順を徹底解説](https://zenn.dev/inablog/articles/5e790c9fbdad20)
 - [2024年版 Homebrew完全ガイド：macOSのパッケージマネージャーを使いこなす](https://qiita.com/yu_uk/items/73654985fb1caeab4cec)
 
@@ -53,7 +55,7 @@ cd ~
 # .latexmkrcファイルの作成
 touch .latexmkrc
 # 作成した.latexmkrcファイルを編集
-opent .latexmkrc
+open .latexmkrc
 ```
 
 テキストエディタ等で開かれた.latexmkrcファイルに、以下のコマンドをコピペして保存する。
@@ -135,18 +137,21 @@ Windowsの場合は[こちら](https://qiita.com/fuku_uma/items/e5ad46125a961232
 3. **複数デバイスでの作業が可能**
    - クラウド上のリポジトリを利用することで、どのデバイスからでも最新状態にアクセスできる。
    - 自宅や研究室など、環境を問わず作業を続行可能。
+4. **GitHub copilotの援助**
+   - 分からないコードやエラーに対して、説明や修正をVSCode内で求められる。
+   - コードを書き始めると、次に書くべきコードを予測して提案してくれる。
 
 Gitの使い方については以下を参照
+
 - [Githubリポジトリのfork（フォーク/派生）の使い方・clone（クローン）との使い分け](https://www.kagoya.jp/howto/rentalserver/webtrend/githubfork/)
-- [【Git】Git初期設定 for Mac OS
-](https://qiita.com/mmikri/items/89508e9435339fcb97e1)
+- [【Git】Git初期設定 for Mac OS](https://qiita.com/mmikri/items/89508e9435339fcb97e1)
 - [【入門】VSCodeとGitHubの連携手順・使い方をわかりやすく解説](https://www.kagoya.jp/howto/rentalserver/webtrend/vscode/)
 - [サル先生のGit入門](https://backlog.com/ja/git-tutorial/)
-
 
 ### 2.2 latexのコンパイル
 
 main.texをコンパイルしてPDFファイルを作成する方法は大きく2つ。
+
 1. latex-workshopタブから実行する
    1. 任意のtexファイルを開く
    2. 左のタブに「TEX」と表記されたlatex-workshopのタブをクリックして開く
@@ -160,10 +165,92 @@ settings.jsonの設定で、保存時に自動でPDFが保存される。
 動作が重いときは、settings.jsonの"latex-workshop.latex.autoBuild.run"を"off"にする。  
 もしくは、main.texを\documentclass[report, 12pt, a4paper, draft]{jsbook} にしてdraftモードを有効にし、画像の出力を省略する。
 
+---
+
+## 3. 参考文献の作り方
+
+### 3.1 BiBTeXの使い方
+
+BiBTeXとは、Latexの参考文献用のデータベースで、通常.bibファイルで管理する。bibファイルを直接編集することはなく、ZoteroやPapershipでまとめて出力する。latex内では本文中で引用された文献のみが目録に登録されるので、細かい文献管理が不要になる。
+
+参考
+
+- [BiBTeXとは](https://qiita.com/SUZUKI_Masaya/items/14f9727845e020f8e7e9)
+- [VSCode + Zotero + BibTeXによる論文執筆ワークフロー](https://zenn.dev/nicetak/articles/zotero-tex-bibtex)
+
+### 3.2 natbibライブラリの使い方
+
+natbibとは、文献管理を目的としたlatexライブラリの一つで、```\usepackage{natbib}```で利用可能になる。　　
+```\usepackage[options]{natbib}```や```\setcitestyle{options}```で設定ができる。
+
+初期設定
+
+- ```\renewcommand{\bibname}{参考文献}```
+  - 文献目録のタイトルを「参考文献」にする
+- ```\setcitestyle{super,open={},close={)}}```
+  - "super"で、右肩上がり数字(山田 (2020) <sup>3\)</sup> )にする。
+  - "open={},close={)}"で、「3\)」のスタイルにする。
+- ```\bibliographystyle{unsrtnat}```
+  - unsrt スタイルに設定する。
+  - 文献がアルファベット順ではなく，引用された順に並ぶ。
+
+参考
+
+- [Natbibチュートリアル: BibTeXを使ったLaTeXでの参考文献管理](https://bibtex.eu/ja/natbib/)
+- [natbibチートシート](https://gking.harvard.edu/files/natnotes2.pdf)
+- [【LaTeX】BibTeXのスタイル76個一覧](https://mathlandscape.com/latex-bibstyles/)
 
 ---
 
-## 3. 各ディレクトリの説明
+## 4. 「、」「。」を「，」「．」で置き換える
+
+日本語で理系論文を書く際、「、」「。」を「，」「．」で置き換えることが一般的である。
+ありがちな変換方法として、「、」「。」を対象に検索&置換があるが、予め楽に変換できるように設定することをオススメする。
+
+### 4.1 環境設定を使う
+
+1. 「システム環境設定」を開く
+2. 「キーボード」タブを開く
+3. 「テキスト入力」を編集する
+4. 「日本語ーローマ字入力」から「句読点の種類」を変更する
+
+参考
+
+- [M1 MacBookを買ったので設定しながらのメモ（２）](https://zenn.dev/dannchu/articles/d595b55f0864ab)
+
+### 4.2 (応用編)latexindentでショートカットを設定する
+
+1. latexindentのインストール
+2. settings.jsonの編集(設定済み)
+
+   ```json
+   {
+      "latex-workshop.formatting.latex": "latexindent", 
+      "latex-workshop.formatting.latexindent.path": "/usr/local/bin/latexindent",
+      "latex-workshop.formatting.latexindent.args": [
+         "-c",
+         "%DIR%/",
+         "%TMPFILE%",
+         "-l",
+         "%DIR%/latexindent",
+         "-r"
+   ]
+   }
+   ```
+
+3. ディレクトリ内にlatexindent.yamlファイルを作る(設定済み)
+4. 対象ファイル内でフォーマットを実行
+   - 右クリック→「ドキュメントのフォーマット」
+   - Shift + option + F
+
+参考
+
+- [VSCode for macのLaTeX Workshopで自動整形できるようにする\(latexindent\)](https://qiita.com/dwatanabee/items/2b9c79c0c5fced3aae22)
+- [VSCodeでLaTeXの句読点を楽に置換する](https://qiita.com/goemontech/items/f2e4d79bb1288652ba69)
+
+---
+
+## 5. 各ディレクトリの説明
 
 ```markdown
 latex-template
@@ -202,4 +289,3 @@ latex-template
 ```
 
 ---
-
