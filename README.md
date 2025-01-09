@@ -275,15 +275,15 @@ latex-template
 │   ├── references.bib         # bibtexファイル
 │   ├── appendix.tex           # 付録
 │   └── acknowledgements.tex   # 謝辞
-├── output
-│   └── main.pdf            　　# 最終出力物
 ├── figure                     # 図専用のディレクトリ
 │   └── figure_sample.png
 ├── table                      # 表専用のディレクトリ
 │   ├── table_sample1.tex
 │   └── table_sample2.tex
+├── output
 ├── log                        # ログファイルや中間生成物
 ├── template                   # テンプレート関連
+├── main.pdf            　      # 最終出力物
 ├── settings.json              # settings
 └── README.md
 ```
