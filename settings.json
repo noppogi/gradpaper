@@ -16,7 +16,7 @@
             // "mendex",
             "platex",
             "dvipdfmx",
-            "move",
+            // "move",
             "delete"
         ]
         },
@@ -30,7 +30,7 @@
             //            "mendex",
             "platex",
             "dvipdfmx",
-            "move",
+            // "move",
             "delete"
         ]
         }
@@ -207,8 +207,8 @@
     },
     // 使用パッケージのコマンドや環境の補完を有効にする
     "latex-workshop.intellisense.package.enabled": true,
-    // 生成ファイルを "output" ディレクトリに吐き出す
-    "latex-workshop.latex.outDir": "./output",
+    // 生成ファイルを現在のディレクトリに吐き出す
+    "latex-workshop.latex.outDir": ".",
     "latex-workshop.message.log.show": true,
     "editor.unicodeHighlight.allowedCharacters": {
         "，": true,
