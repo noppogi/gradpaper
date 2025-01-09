@@ -3,6 +3,7 @@
 *.aux
 *.bbl
 *.blg
+*.dvi
 *.idx
 *.ind
 *.lof
@@ -19,6 +20,7 @@
 *.fls
 *.log
 *.fdb_latexmk
+*.synctex
 *.synctex.gz
 _minted*
 *.nav
