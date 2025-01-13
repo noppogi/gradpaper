@@ -26,7 +26,7 @@ _minted*
 *.nav
 *.snm
 *.vrb
-
+*.DS_Store
 !/figure/figure_sample.png
 !/logs/.gitkeep
 
