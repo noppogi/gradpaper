@@ -1,0 +1,19 @@
+\begin{table}[h!]
+  \centering
+  \renewcommand{\arraystretch}{1.2} % 行間を広げる
+  \begin{tabularx}{\textwidth}{p{0.25\textwidth}   X}
+  \toprule
+  \textbf{設定名}     &\textbf{設定詳細}                                 \\
+  \midrule
+  探索条件            & 所要時間最小                                  \\
+  設定速度            & 道路交通センサス2021年実施分より道路種類ごとに一定な平均旅行速度（混雑を考慮）．\cite{kokudo2021} 過去の経路探索においても現況の速度と同じ速度を用いる．           \\
+  交通モード            & 道路モード，有料道路と一般道路のみを使用し鉄道などの他の交通は使用しない．                                  \\
+  ネットワーク設定          & 2021年〜2023年の道路ネットワークを不通過区間の設定により再現．ただし，有料道路以外は現況のネットワーク．                                  \\
+  起終点設定            & 起点は各圏央道IC，終点は各放射道路のJCTから下り方面の一つ先のIC                               \\
+  \bottomrule
+  \end{tabularx}
+  \caption{経路探索条件}
+  \label{conditions of search}
+  \end{table}
+  
+
