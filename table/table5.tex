@@ -1,0 +1,66 @@
+\begin{table}[H]
+  \centering
+  \begin{minipage}[t]{0.45\columnwidth}
+  \begin{center}
+  \caption{分析結果 接続本数分析 \\ ~ }
+  \label{result_setuzoku}
+  \scalebox{0.80}{
+  \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+  \begin{tabular}{l*{4}{c}}
+  \hline\hline
+                 &\multicolumn{1}{c}{}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{Two-way}\\
+  
+  \hline
+  (Intercept)    &       &      &       12.491\sym{***}&       \\
+                 &       &      &        (0.006)       &        \\
+  [1em]
+  接続本数        &       &      &      0.005\sym{**} &          \\
+                 &      &       &     (0.002)       &           \\
+  [1em]
+  \hline
+  \(R^{2}\)      &      &       &        0.985        &          \\
+  \(Adj.R^{2}\)  &      &       &       0.984         &         \\
+  \(Num.obs.\)   &      &       &    20470            &          \\
+  \(RMSE\)       &      &       &    0.084            &          \\
+  \(N Clusters\) &      &       &    890              &          \\
+  \hline\hline
+  \multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+  \multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+  \end{tabular}
+  }
+  \end{center}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\columnwidth}
+  \begin{center}
+  \caption{分析結果 マーケットアクセス分析 \\~}
+  \label{result_MA}
+  \scalebox{0.80}{
+  \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+  \begin{tabular}{l*{4}{c}}
+    \hline\hline
+    &\multicolumn{1}{c}{}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{Two-way}\\
+
+\hline
+(Intercept)    &       &      &       11.236\sym{***}&       \\
+               &       &      &        (0.291)       &        \\
+[1em]
+ MA            &       &      &      0.139\sym{***} &          \\
+               &      &       &     (0.0321)       &           \\
+[1em]
+\hline
+\(R^{2}\)      &      &       &        0.985        &          \\
+\(Adj.R^{2}\)  &      &       &       0.985         &         \\
+\(Num.obs.\)   &      &       &    20470            &          \\
+\(RMSE\)       &      &       &    0.084            &          \\
+\(N Clusters\) &      &       &    890              &          \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+  \end{center}
+  \end{minipage}
+  \end{table}
+  
+
