@@ -82,7 +82,7 @@ NITASは国土交通省が提供している道路・鉄道・航空・船舶の
 \input{table/table3.tex}
 
 \subsubsection{乗降客数データ}
-乗降客数データは国土数値情報の駅別乗降客数データを用いた．最寄り駅情報を用いて乗降客数を地価データに紐づけている．
+乗降客数データは国土数値情報の2022年度の駅別乗降客数データを用いた．最寄り駅情報を用いて乗降客数を地価データに紐づけている．
 \newpage
 \section{データの作成}
 \subsection{使用したデータ}
@@ -108,22 +108,41 @@ NITASは国土交通省が提供している道路・鉄道・航空・船舶の
 \end{figure}
 図\ref{MA_2023_distribution}を見ると，マーケットアクセスは関越道周辺で大きく，ついで東北道や東名高速付近で大きくなっている．また，常磐道や東関東道周辺ではマーケットアクセスは小さいことが分かった．
 
-
+図\ref{deruta_landprice disIC_m}は，縦軸に2001年から2023年にかけての地価の変化(円)，横軸に最寄りの圏央道ICからの距離(m)をとり，各地価観測点ごとにプロットしたものである．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=7cm]{figure/ch_lap_dis_IC.png}
-  \caption{地価の変化とICからの距離}
+  \includegraphics[width=6cm]{figure/ch_lap_dis_IC.png}
+  \caption{地価の変化と圏央道ICからの距離}
   \label{deruta_landprice disIC_m}
 \end{figure}
+図\ref{deruta_landprice disIC_m}を見ると，多くのデータが縦軸の0付近に集中しており，圏央道ICからの距離は地価の変化にあまり影響を与えていないと考えられる．
 
+図\ref{deruta_landprice_H13_landprice}は，縦軸に2001年から2023年にかけての地価の変化(円)，横軸に2001年の地価(円)をとり，各地価観測点ごとにプロットしたものである．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=7cm]{figure/ch_lap_2001_lap.png}
+  \includegraphics[width=6cm]{figure/ch_lap_2001_lap.png}
   \caption{地価の変化と2001年の地価}
   \label{deruta_landprice_H13_landprice}
 \end{figure}
+図\ref{deruta_landprice_H13_landprice}を見ると，多くのデータが2001年の地価が25万円の周りにプロットされている．2001年の地価が25万円以下のデータでは，2001年の地価が小さいと地価の変化が小さい．2001年の地価が25万円を超えたデータでは，ばらつきが大きくなっている．
 
+図\ref{deruta_landprice_dis_sta}は，縦軸に2001年から2023年にかけての地価の変化(円)，横軸に2022年の最寄り駅からの距離(km)をとり，各地価観測点ごとにプロットしたものである．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=6cm]{figure/ch_lap_dis_sta.jpeg}
+  \caption{地価の変化と最寄り駅距離}
+  \label{deruta_landprice_dis_sta}
+\end{figure}
+図\ref{deruta_landprice_dis_sta}を見ると，駅からの距離が近いデータはばらつきが大きいが，駅から離れるにつれて縦軸の0付近に固まっていることがわかる．
 
+図\ref{deruta_landprice_pas}は，縦軸に2001年から2023年にかけての地価の変化(円)，横軸に2022年の最寄り駅の乗降客数(人/日)をとり，各地価観測点ごとにプロットしたものである．
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=6cm]{figure/ch_lap_pas.jpeg}
+  \caption{地価の変化と乗降客数}
+  \label{deruta_landprice_pas}
+\end{figure}
+図\ref{deruta_landprice_pas}を見ると，乗降客数が5万人前後のデータは縦軸の0付近に固まっているが，乗降客数が多くなるとデータの数も少なくなり，ばらつきも大きくなっていることがわかる．
 
 
 
