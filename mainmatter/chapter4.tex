@@ -58,9 +58,15 @@
 
 TWFE推定量$\beta_{C}$は地価観測点において放射高速道路の接続本数が1本増えた時に地価が何\%変化するかを表す．この分析では接続本数データを接続性の指標として扱っている．
 
+また，接続本数の中でも1本目の放射高速道路が接続した時の効果に着目した分析も行った．1本目接続効果分析では式\ref{first_setuzoku}の双方向固定効果モデルを用いた．
+\begin{eqnarray}
+  \ln{Y_{it}}= \alpha_{i} + \pi_{t} + \beta_{first}D^{first}_{it} + \beta_{second}C^{second}_{it} + \varepsilon_{it}
+\label{first_setuzoku}
+\end{eqnarray}
+ここで，$Y_{it}$は地価観測点$i$の時点$t$における地価，$\alpha_{i}$は個別固定効果，$\pi_{t}$は時間固定効果，$D^{first}_{it}$は1本目接続ダミー，$C^{second}_{it}$は地価観測点$i$の時点$t$における放射高速道路の2本目以降の接続本数，$\varepsilon_{it}$は誤差項である．
+
 \subsubsection{マーケットアクセス分析}
 マーケットアクセス分析の推定には式\ref{4.5}の双方向固定効果モデルを用いた．
-
 \begin{eqnarray}
   \ln{Y_{it}}= \alpha_{i} + \pi_{t} + \beta_{MA}\ln{{MA}_{it}}+ \varepsilon_{it}
     \label{4.5}

@@ -1,0 +1,38 @@
+\begin{table}[H]
+  \centering
+  \begin{minipage}[t]{0.45\columnwidth}
+  \begin{center}
+  \caption{分析結果 1本目接続効果 \\~}
+  \label{result_heterogeneity_firstsetuzoku}
+  \scalebox{0.80}{
+  \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+  \begin{tabular}{l*{4}{c}}
+    \hline\hline
+    &\multicolumn{1}{c}{}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{Two-way}\\
+
+\hline
+(Intercept)    &       &      &       12.492\sym{***}&       \\
+               &       &      &        (0.305)       &        \\
+[1em]
+ 1本目接続ダミー            &      &       &      -0.003\sym{} &          \\
+               &      &       &     (0.005)         &           \\
+[1em]
+2本目以降接続本数     &      &      &      0.008\sym{**} &          \\
+               &      &       &     (0.003)         &           \\
+  [1em]
+\hline
+\(R^{2}\)      &      &       &        0.985        &          \\
+\(Adj.R^{2}\)  &      &       &       0.984         &         \\
+\(Num.obs.\)   &      &       &    20470            &          \\
+\(RMSE\)       &      &       &    0.084            &          \\
+\(N Clusters\) &      &       &    890              &          \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Clustered robust standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+  \end{center}
+  \end{minipage}
+  \end{table}
+  
+

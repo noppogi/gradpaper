@@ -1,19 +1,53 @@
-\begin{table}[h!]
-  \centering
-  \renewcommand{\arraystretch}{1.2} % 行間を広げる
-  \begin{tabularx}{\textwidth}{p{0.20\textwidth} p{0.25\textwidth} p{0.25\textwidth} X}
-  \toprule
-  \textbf{データ分類}     &\textbf{データ項目}         & \textbf{内容}                                    & \textbf{出典}                   \\
-  \midrule
-  高速道路データ          &高速道路時系列データ         & GIS形式の点ベースのIC情報と線ベースの路線情報           & 国土交通省「国土数値情報」    \\
-  地価データ             &地価公示データ              & 各地価観測点の鑑定地価                                & 国土交通省「国土数値情報」    \\
-  交通量データ            &上下線合計日交通量           & 各区間の24時間交通量の上下線合計                       & 全国道路・街頭交通情勢調査              \\
-  所要時間データ          &総所要時間                  & 各ICから各放射道路のJCTまでの所要時間                   & NITAS            \\
-  乗降客数データ          &駅別乗降客数データ           &駅別の乗降客数                                         &国土交通省「国土数値情報」\\
-  \bottomrule
-  \end{tabularx}
-  \caption{使用するデータ一覧}
-  \label{data_list}
-  \end{table}
+  \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.2} % 行間を広げる
+    \begin{tabularx}{\textwidth}{p{0.20\textwidth} p{0.25\textwidth} p{0.25\textwidth} X}
+    \toprule
+    \textbf{データ分類}     &\textbf{データ項目}         & \textbf{内容}                                    & \textbf{出典}                   \\
+    \midrule
+    高速道路データ          &高速道路時系列データ         & GIS形式の点ベースのIC情報と線ベースの路線情報           & 国土交通省「国土数値情報」    \\
+    地価データ             &地価公示データ              & 各地価観測点の鑑定地価                                & 国土交通省「国土数値情報」    \\
+    交通量データ            &上下線合計日交通量           & 各区間の24時間交通量の上下線合計                       & 全国道路・街頭交通情勢調査              \\
+    所要時間データ          &総所要時間                  & 各ICから各放射道路のJCTまでの所要時間                   & NITAS            \\
+    乗降客数データ          &駅別乗降客数データ           &駅別の乗降客数                                         &国土交通省「国土数値情報」\\
+    \bottomrule
+    \end{tabularx}
+    \caption{使用するデータ一覧}
+    \label{data_list}
+   \end{table}
   
 
+  %  \begin{table}[h!]
+  %    \centering
+  %    \renewcommand{\arraystretch}{1.2} % 行間を広げる
+  %    \begin{tabularx}{\textwidth}{p{0.30\textwidth} p{0.30\textwidth} p{0.30\textwidth} X}
+  %    \toprule
+  %    \textbf{データ分類}     &\textbf{データ項目}                                             & \textbf{出典}                   \\
+  %    \midrule
+  %    高速道路データ          &高速道路時系列データ                   & 国土交通省「国土数値情報」    \\
+  %    地価データ             &地価公示データ                                          & 国土交通省「国土数値情報」    \\
+  %    交通量データ            &上下線合計日交通量                                 & 全国道路・街頭交通情勢調査              \\
+  %    所要時間データ          &総所要時間                                    & NITAS            \\
+  %    乗降客数データ          &駅別乗降客数データ                                                   &国土交通省「国土数値情報」\\
+  %    \bottomrule
+  %    \end{tabularx}
+  %    \caption{使用するデータ一覧}
+  %    \label{data_list}
+  %    \end{table}
+
+  % \begin{table}[h!]
+  %   \centering
+  %   \renewcommand{\arraystretch}{1.2} % 行間を広げる
+  %   \begin{tabularx}{\textwidth}{p{0.30\textwidth} p{0.20\textwidth}p{0.25\textwidth} p{0.25\textwidth} X}
+  %   \toprule
+  %   \textbf{地域特性}   &\textbf{地域特性ダミー}  &\textbf{$0$}         & \textbf{$1$}                                                       \\
+  %   \midrule
+  %   最寄り圏央道IC距離    &$D_{i}^{IC}$     &5km超         & 5km以下               \\
+  %   基準時点地価           &$D_{i}^{low}$  &25万円超              & 25万円以下                                  \\
+  %   最寄り駅の乗降客数     &$D_{i}^{pas}$     &5万人超                  & 5万人以下                              \\
+  %   最寄り駅距離         &$D_{i}^{sta}$   &2.5km超           & 2.5km以下                                    \\
+  %   \bottomrule
+  %   \end{tabularx}
+  %   \caption{使用するデータ一覧}
+  %   \label{data_list}
+  %  \end{table}
